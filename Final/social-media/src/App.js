@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./LoginPage/Login";
 import privateProfile from "./pages/privateProfile";
 import publicProfile from "./pages/publicProfile";
-import Feed from "./pages/Feed";
-import Search from "./pages/Search";
-import Followers from "./pages/Followers";
-import Following from "./pages/Following";
-import CreatePost from "./pages/CreatePost";
+import Feed from "./pages/feed";
+import Search from "./pages/search";
+import Followers from "./pages/followers";
+import Following from "./pages/following";
+import CreatePost from "./pages/createPost";
 
 
 function App() {
