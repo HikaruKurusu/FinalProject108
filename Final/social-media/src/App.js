@@ -2,14 +2,13 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./LoginPage/Login";
-import privateProfile from "./pages/privateProfile";
-import publicProfile from "./pages/publicProfile";
+import PrivateProfile from "./pages/privateProfile";
+import PublicProfile from "./pages/publicProfile";
 import Feed from "./pages/feed";
 import Search from "./pages/search";
 import Followers from "./pages/followers";
 import Following from "./pages/following";
 import CreatePost from "./pages/createPost";
-
 
 function App() {
   return (
@@ -17,8 +16,8 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/profile" element={<privateProfile />} />
-          <Route path="/publicProfile" element={<publicProfile />} />
+          <Route path="/profile" element={<PrivateProfile />} />
+          <Route path="/publicProfile" element={<PublicProfile />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/search" element={<Search />} />
           <Route path="/followers" element={<Followers />} />
