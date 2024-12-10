@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './LoginRegister.css';
+import './Login.css';
 import { useNavigate } from "react-router-dom";
 
 
@@ -22,11 +22,19 @@ const Login = () => {
         });
 
         const data = await response.json();
-     
+
+        if (response.ok) {
+            // Login successful
+            setMessage("Login Successful!");
+        } else {
+            // Login failed, show error message from server
+            setMessage(data.message || "Login failed. Please check your credentials.");
+        }
     } catch (error) {
         setMessage("An error occurred. Please try again.");
     }
 };
+
 
   
 
