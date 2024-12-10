@@ -9,7 +9,24 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///BobCat.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+class Person(db.Model):
+    p_status = db.Column(db.String(100))
+    p_email = db.Column(db.String(100), nullable=False)
+    p_user_id = db.Column(db.String(100), primary_key=True)
+    p_name = db.Column(db.String(100), nullable=False)
+    p_password = db.Column(db.String(100), nullable=False)
 
+class Friends(db.Model):
+    f_user_id = db.Column(db.String(100), primary_key=True)
+    f_friend_id = db.Column(db.String(100), primary_key=True)
+
+class Comments(db.Model):
+    p_comment_id = db.Column(db.String(100), primary_key=True)
+    p_user_id = db.Column(db.String(100), nullable=False)
+    p_post_id = db.Column(db.String(100), nullable = False)
 
 with app.app_context():
-    db.create_all
+    db.create_all()
+
+if __name__ == '__main__':
+    app.run(debug=True)
