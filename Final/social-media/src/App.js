@@ -2,13 +2,13 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./LoginPage/Login";
-import privateProfile from "./Profile/privateProfile";
-import publicProfile from "./Profile/publicProfile";
-import Feed from "./Feed/Feed";
-import Search from "./Search/Search";
-import Followers from "./Followers/Followers";
-import Following from "./Following/Following";
-import CreatePost from "./CreatePost/CreatePost";
+import privateProfile from "./pages/privateProfile";
+import publicProfile from "./pages/publicProfile";
+import Feed from "./pages/Feed";
+import Search from "./pages/Search";
+import Followers from "./pages/Followers";
+import Following from "./pages/Following";
+import CreatePost from "./pages/CreatePost";
 
 
 function App() {
