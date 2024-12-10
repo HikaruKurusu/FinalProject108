@@ -37,5 +37,6 @@ CREATE TABLE follow(
 -- profile
 -- feed
 -- followed page
+
 -- search page
 -- others person profile page
