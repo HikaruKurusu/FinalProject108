@@ -7,7 +7,6 @@ function Feed() {
   return (
     <div>
       <h1>Feed</h1>
-      <button onClick={() => navigate("/profile")}>Go to Profile</button>
     </div>
   );
 }
