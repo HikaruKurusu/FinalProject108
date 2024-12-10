@@ -2,6 +2,13 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./LoginPage/Login";
+import privateProfile from "./Profile/privateProfile";
+import publicProfile from "./Profile/publicProfile";
+import Feed from "./Feed/Feed";
+import Search from "./Search/Search";
+import Followers from "./Followers/Followers";
+import Following from "./Following/Following";
+import CreatePost from "./CreatePost/CreatePost";
 
 
 function App() {
