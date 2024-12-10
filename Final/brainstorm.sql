@@ -25,4 +25,4 @@ CREATE TABLE likes();
 CREATE TABLE dislikes();
 
 CREATE TABLE follow();
-
+-- 
