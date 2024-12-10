@@ -14,6 +14,7 @@ function App() {
           <Route path="/feed" element={<Feed />} />
           <Route path="/search" element={<Search />} />
           <Route path="/followers" element={<Followers />} />
+          <Route path="/following" element={<Following />} />
           <Route path="/createPost" element={<CreatePost />} />
         </Routes>
       </div>
