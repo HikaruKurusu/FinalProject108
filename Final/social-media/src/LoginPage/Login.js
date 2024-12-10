@@ -26,6 +26,7 @@ const Login = () => {
         if (response.ok) {
             // Login successful
             setMessage("Login Successful!");
+            navigate('/feed')
         } else {
             // Login failed, show error message from server
             setMessage(data.message || "Login failed. Please check your credentials.");

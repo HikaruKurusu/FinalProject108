@@ -32,7 +32,7 @@ def login():
     password = data.get('password')
     if not username or not password:
         return jsonify({"error": "Username and password are required"}), 400
-    user = Person.query.filter_by(p_user_id=username, p_password=password).first()
+    user = Person.query.filter_by(p_email=username, p_password=password).first()
     if user:
         return jsonify({"message": "Login successful", "userID": user.p_user_id}), 200
     else:
