@@ -10,7 +10,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 class Person(db.Model):
-    p_status = db.Column(db.String(100))
+    p_status = db.Column(db.String(100), nullable=True)
     p_email = db.Column(db.String(100), nullable=False)
     p_user_id = db.Column(db.String(100), primary_key=True)
     p_name = db.Column(db.String(100), nullable=False)
@@ -24,6 +24,19 @@ class Comments(db.Model):
     p_comment_id = db.Column(db.String(100), primary_key=True)
     p_user_id = db.Column(db.String(100), nullable=False)
     p_post_id = db.Column(db.String(100), nullable = False)
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    username = data.get('username')
+    password = data.get('password')
+    if not username or not password:
+        return jsonify({"error": "Username and password are required"}), 400
+    user = Person.query.filter_by(p_user_id=username, p_password=password).first()
+    if user:
+        return jsonify({"message": "Login successful", "userID": user.p_user_id}), 200
+    else:
+        return jsonify({"error": "Invalid username or password"}), 401
 
 with app.app_context():
     db.create_all()
