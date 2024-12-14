@@ -101,7 +101,7 @@ function Feed() {
             <h3>{post.p_content}</h3>
             {post.p_image && (
               <img
-                src={`http://yourserver.com/post/${post.p_post_id}`}
+                src={`http://127.0.0.1/post/${post.p_post_id}`} // Adjust the URL as per your API setup
                 alt="Post Image"
               />
             )}
