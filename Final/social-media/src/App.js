@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./LoginPage/Login";
-import PrivateProfile from "./pages/privateProfilePage/privateProfile";
-import PublicProfile from "./pages/publicProfilePage/publicProfile";
-import Feed from "./pages/feedPage/feed";
-import Search from "./pages/searchPage/search";
-import Followers from "./pages/followersPage/followers";
-import Following from "./pages/followingPage/following";
-import CreatePost from "./pages/createPost";
+import Login from "./LoginPage/Login.js";
+import PrivateProfile from "./pages/privateProfilePage/privateProfile.jsx";
+import PublicProfile from "./pages/publicProfilePage/publicProfile.jsx";
+import Feed from "./pages/feedPage/feed.jsx";
+import Search from "./pages/searchPage/search.jsx";
+import Followers from "./pages/followersPage/followers.jsx";
+import Following from "./pages/followingPage/following.jsx";
+import CreatePost from './CreatePost.jsx';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/followers" element={<Followers />} />
           <Route path="/following" element={<Following />} />
-          <Route path="/createPost" element={<CreatePost />} />
+          <Route path="/createPost" element={<CreatePost />} />  {/* Route to CreatePost component */}
         </Routes>
       </div>
     </Router>
