@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/navbar"
-import Login from "./LoginPage/Login.jsx.js";
+import Login from "./LoginPage/Login.jsx";
 import PrivateProfile from "./pages/privateProfilePage/privateProfile.jsx";
 import PublicProfile from "./pages/publicProfilePage/publicProfile.jsx";
 import Feed from "./pages/feedPage/feed.jsx";
